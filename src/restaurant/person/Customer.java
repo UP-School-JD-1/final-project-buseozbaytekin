@@ -68,15 +68,13 @@ public class Customer extends Person implements Runnable {
 	}
 
 	public synchronized Order chooseOrder() {
-		Random random = new Random();
-		int chooseOrderRandom = random.nextInt(5);
-		this.order = OrderFactory.randomOrder(chooseOrderRandom);
+		
+		this.order = OrderFactory.randomOrderChoose();
 		System.out.println(getName() + " " + getId() + "'s order: " + this.order + ". Prep time: " + this.order.prepTimeCounter());
 		System.out.println();
 		management.preparingOrder.add(this.order);
 		isOrdered = true;
 		return this.order;
-	
 	}
 
 	public void eatOrder() {

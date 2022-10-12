@@ -58,5 +58,12 @@ public class OrderFactory {
 		return order;
 		
 	}
+
+	public static Order randomOrderChoose() {
+		Random random = new Random();
+		int chooseRandom = random.nextInt(5);
+		Order order = randomOrder(chooseRandom);
+		return order;
+	}
 	
 }
