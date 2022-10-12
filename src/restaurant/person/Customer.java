@@ -24,7 +24,7 @@ public class Customer extends Person implements Runnable {
 		super(id, name);
 		this.management = management;
 	}
-
+//Customer check to available table and randomly decide waiting or go
 	public void isAvailable() {
 		if (management.getTable() > 0) {
 			management.setTable(-1);
@@ -66,9 +66,8 @@ public class Customer extends Person implements Runnable {
 		System.out.println(getName() + " " + getId() + " is sitting table ");
 
 	}
-
+//Customer choose random order with OrderFactory's methods and add preparingOrder queue
 	public synchronized Order chooseOrder() {
-		
 		this.order = OrderFactory.randomOrderChoose();
 		System.out.println(getName() + " " + getId() + "'s order: " + this.order + ". Prep time: " + this.order.prepTimeCounter());
 		System.out.println();
@@ -76,13 +75,13 @@ public class Customer extends Person implements Runnable {
 		isOrdered = true;
 		return this.order;
 	}
-
+	//Customer eat order
 	public void eatOrder() {
 		System.out.println(getName() + " " + getId() + " is eating " + this.order + ". Eating time: " + this.order.eatingTimeCounter());
 		System.out.println();
 		isEaten = true;
 	}
-
+	//Customer leave
 	public void leave() {
 		if (isEaten == true) {
 			System.out.println(getName() + " " + getId() + " left.");

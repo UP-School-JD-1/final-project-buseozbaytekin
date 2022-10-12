@@ -58,7 +58,7 @@ public class OrderFactory {
 		return order;
 		
 	}
-
+	//Customer choosing order randomly with this method
 	public static Order randomOrderChoose() {
 		Random random = new Random();
 		int chooseRandom = random.nextInt(5);

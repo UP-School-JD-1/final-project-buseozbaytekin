@@ -9,11 +9,9 @@ import restaurant.restaurantItems.*;
 
 public class Test {
 
-	Queue<Order> orderList = new LinkedList<Order>();
-
 	public static void main(String[] args) {
 		
-		
+		//Creating thread array. initiliaze threads name and started.
 		Management management = new Management();
 		int customerCount = 9;
 		int waiterCount = 5;

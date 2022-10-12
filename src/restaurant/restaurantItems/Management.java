@@ -10,8 +10,9 @@ public class Management {
 	
 	public int table = 4;
 	
-	public Queue<Order> preparingOrder = new LinkedList<>();
-	public Queue<Order> preparedOrder = new LinkedList<>();
+	//Created static queue order list because access
+	public static Queue<Order> preparingOrder = new LinkedList<>();
+	public static Queue<Order> preparedOrder = new LinkedList<>();
 	
 	
 	public int getTable() {

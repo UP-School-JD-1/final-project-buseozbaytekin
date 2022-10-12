@@ -23,12 +23,11 @@ public class Waiter extends Worker  implements Runnable{
 		management.preparingOrder.element();
 
 	}
-	
+	//Waiter take order and call chef for the order
 	public synchronized void callChef() { 
 		order = management.preparingOrder.element();
 		System.out.println(this + " passed the order " +order.toString() +" to the chef.");
 		System.out.println();
-		
 		takenOrder = true;
 		waitForOrder();
 
@@ -38,7 +37,7 @@ public class Waiter extends Worker  implements Runnable{
 		System.out.println(this + " waiting for the order ");
 		System.out.println();
 	}
-	
+	//Waiter deliver to customer's order
 	public synchronized void deliverOrder() { 
 		System.out.println("Waiter: bone apetite! -delivered customer 's order: ");
 		System.out.println();

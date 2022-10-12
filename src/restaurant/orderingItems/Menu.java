@@ -14,11 +14,11 @@ public class Menu {
 		this.preparationTime = preparationTime;
 		this.eatingTime = eatingTime;
 	}
-
+	
 	public long getPreparationTime() {
 		return preparationTime;
 	}
-
+	
 	public long getEatingTime() {
 		return eatingTime;
 	}

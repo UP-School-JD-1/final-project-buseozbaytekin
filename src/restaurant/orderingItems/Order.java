@@ -35,18 +35,18 @@ public class Order {
 		this.food = food;
 	}
 	
-	public  void takeOrder() { //müşteriden lock ı alacak 
+	public  void takeOrder() {
 		lock.lock();
 		System.out.println(customer + " take customer's order: ");
 		System.out.println();
 
 	}
-
+	//Orders total preparation time
 	public long prepTimeCounter() {
 		long prepTime = food.preparationTime + food1.preparationTime + drink.preparationTime;
 		return prepTime;
 	}
-
+	//Orders total eating time
 	public long eatingTimeCounter() {
 		long eatingTime = food.eatingTime + food1.eatingTime + drink.eatingTime;
 		return eatingTime;
