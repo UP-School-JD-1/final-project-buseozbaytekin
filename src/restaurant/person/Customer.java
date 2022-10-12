@@ -76,7 +76,7 @@ public class Customer extends Person implements Runnable {
 		management.preparingOrder.add(this.order);
 		isOrdered = true;
 		return this.order;
-		// burada queue liste ekleyecek preparing olana
+	
 	}
 
 	public void eatOrder() {
@@ -91,7 +91,6 @@ public class Customer extends Person implements Runnable {
 			System.out.println();
 		}
 		management.setTable(1);
-		//System.out.println("Available table left: " + management.getTable());
 		isLeave = true;
 	}
 

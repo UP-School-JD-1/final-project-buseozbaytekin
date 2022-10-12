@@ -24,14 +24,14 @@ public class Chef extends Worker  implements Runnable{
 		management.preparingOrder.poll();
 		
 		try {
-			Thread.sleep(order.prepTimeCounter());//notşfy waşt eklenecek bukadar uyur
+			Thread.sleep(order.prepTimeCounter());
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		
 	}
 	
-	public synchronized void completedOrder() { //yemeğin hazır olduğunu söyleyecek. garsona lockı teslim edecek ve müsaitim diyecek
+	public synchronized void completedOrder() { 
 		Order order = management.preparingOrder.poll();
 		isOrderDone = true;
 		System.out.println("Chef completed order and aviable now.");

@@ -17,7 +17,6 @@ public class Test {
 		Management management = new Management();
 		int customerCount = 9;
 		int waiterCount = 5;
-//			int chefCount = 1;
 		
 		Thread[] customersThread = new Thread[customerCount];
 		for(int i = 1; i < customerCount; i++) {
@@ -25,26 +24,12 @@ public class Test {
 			customersThread[i].start();
 			
 		}
-//		for(int i = 1; i < customerCount; i++) {
-//			try {
-//				customersThread[i].join();
-//			}catch (InterruptedException e){
-//				e.printStackTrace();
-//			}
-//		}
 		
 		Thread[] waitersThread = new Thread[waiterCount];
 		for(int i = 1; i < waiterCount; i++) {
 			waitersThread[i] = new Thread(new Waiter (i, "Waiter", management));
 			waitersThread[i].start();
 		}
-//		for(int i = 1; i < waiterCount; i++) {
-//			try {
-//				waitersThread[i].join();
-//			}catch (InterruptedException e){
-//				e.printStackTrace();
-//			}
-//		}
 		
 		Chef chef = new Chef(1,"Chef", management);
 		Thread t1 = new Thread(chef);

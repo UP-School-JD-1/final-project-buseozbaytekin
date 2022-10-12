@@ -12,8 +12,7 @@ public class Management {
 	
 	public Queue<Order> preparingOrder = new LinkedList<>();
 	public Queue<Order> preparedOrder = new LinkedList<>();
-//	Queue<Order> cookingOrder = new LinkedList<>();
-	public Queue<Customer> queue = new ConcurrentLinkedQueue<Customer>();//bekleyenler listesi için
+	
 	
 	public int getTable() {
 		return table;

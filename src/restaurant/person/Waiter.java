@@ -17,14 +17,14 @@ public class Waiter extends Worker  implements Runnable{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public synchronized void takeOrder() { //müşteriden lock ı alacak 
+	public synchronized void takeOrder() { 
 		System.out.println(this + " take customer's order ");
 		System.out.println();
 		management.preparingOrder.element();
 
 	}
 	
-	public synchronized void callChef() { // müşteriden aldığı lockı chef e verecek
+	public synchronized void callChef() { 
 		order = management.preparingOrder.element();
 		System.out.println(this + " passed the order " +order.toString() +" to the chef.");
 		System.out.println();
@@ -34,13 +34,13 @@ public class Waiter extends Worker  implements Runnable{
 
 	}
 	
-	public void waitForOrder() { //yemek hazırlanırken beklemesini sağlayan method
+	public void waitForOrder() { 
 		System.out.println(this + " waiting for the order ");
 		System.out.println();
 	}
 	
-	public synchronized void deliverOrder(Customer customer) { //lockı müşteriye teslim edecek müşteri yiyip gidecek
-		System.out.println("Waiter: bone apetite! -delivered customer 's " + customer.getName() +" order: ");
+	public synchronized void deliverOrder() { 
+		System.out.println("Waiter: bone apetite! -delivered customer 's order: ");
 		System.out.println();
 
 		availableWaiter = true;
@@ -57,7 +57,7 @@ public class Waiter extends Worker  implements Runnable{
 		takeOrder();
 		callChef();
 		waitForOrder();
-//		deliverOrder(null);
+		deliverOrder();
 		
 		// TODO Auto-generated method stub
 		
