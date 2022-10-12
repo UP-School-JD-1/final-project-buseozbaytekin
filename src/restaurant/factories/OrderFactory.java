@@ -54,32 +54,8 @@ public class OrderFactory {
 		orders.add(new Order(foodChoose));
 		
 		Order order = orders.get(choosing);
-		/*Order order =new Order();
-		if (choosing == 0) {
-			//orders.add(new Order(drinkChoose, foodChoose,foodChoose1));		
-			Order order= new Order(drinkChoose, foodChoose,foodChoose1);
-
-		} else if (choosing == 1) {
-			//orders.add(new Order(foodChoose, foodChoose1));
-			Order order= new Order(foodChoose,foodChoose1);
-
-		} else if (choosing == 2) {
-			//orders.add(new Order(drinkChoose, foodChoose));
-			Order order= new Order(drinkChoose, foodChoose);
-
-		} else if (choosing == 3) {
-			//orders.add(new Order(foodChoose));
-			Order order= new Order(foodChoose1);
-
-		} else {
-			//orders.add(new Order(drinkChoose));
-			Order order= new Order(drinkChoose);
-		}*/
-
-	
 		
-		
-		return order;//buraya return ne gelecek
+		return order;
 		
 	}
 	

@@ -28,7 +28,7 @@ public class Waiter extends Worker  implements Runnable{
 		order = management.preparingOrder.element();
 		System.out.println(this + " passed the order " +order.toString() +" to the chef.");
 		System.out.println();
-		//chef.preperingOrder();//düşün
+		
 		takenOrder = true;
 		waitForOrder();
 

@@ -27,7 +27,7 @@ public class Customer extends Person implements Runnable {
 
 	public void isAvailable() {
 		if (management.getTable() > 0) {
-			management.setTable(-1); // burayı tam anlamadım
+			management.setTable(-1);
 			isEntered = true;
 		} else {
 			if (controller == 0) {
@@ -117,13 +117,3 @@ public class Customer extends Person implements Runnable {
 	}
 
 }
-
-////Waiter waiter=RestaurantItemFactory.waiterList().get(2);
-////Chef chef=RestaurantItemFactory.chefList().get(1);
-//entered();
-//chooseTable();
-//chooseOrder();
-////waiter.callChef(order1, chef);
-////chef.preperingOrder(order1);
-//eatOrder();
-//leave();

@@ -17,7 +17,7 @@ public class Chef extends Worker  implements Runnable{
 		
 	}
 	
-	public synchronized void preperingOrder() { //garsondan lockı alacak ve hazırlamaya başlayacak. hazırlanma süresi kadar uyuyacak
+	public synchronized void preperingOrder() {
 		order = management.preparingOrder.element();
 		System.out.println("Chef is prepearing order "+order.toString()+" .");
 		System.out.println();
